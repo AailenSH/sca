@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC & A - Moda y Confección Artesanal</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Script ultrarrápido para aplicar el tema antes de renderizar y evitar el destello -->
+    <script>
+        if (localStorage.getItem("theme") === "oscuro") {
+            document.documentElement.classList.add("oscuro-inicial");
+        }
+    </script>
+</head>
+
+<body class="animar-transicion">
+
+    <!-- Encabezado superior -->
+    <header class="main-header">
+        <div class="header-left">
+            <button id="menu-btn" class="btn-menu-toggle">☰</button>
+            <a href="#" class="logo-link">
+                <img src="./logosca.png" alt="SC & A Logo" class="logo-img">
+            </a>
+
+            <div class="brand-text">
+                <span class="brand-title">Outfits a tu altura</span>
+                <span class="brand-subtitle">Diseño independiente y confección artesanal</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button id="theme-toggle" class="btn btn-mood" title="Cambiar modo">🌙</button>
+            <a href="https://instagram.com/tu_cuenta" target="_blank" class="header-ig-btn" title="Instagram">
+                <img src="./instalogosca.jpeg" alt="Instagram" class="social-logo-img">
+            </a>
+            <button id="contact-btn" class="btn-contact">CONTÁCTANOS</button>
+        </div>
+    </header>
+
+    <!-- Menú lateral izquierdo -->
+    <aside id="side-menu" class="side-menu">
+        <nav class="menu-items-container">
+            <a href="./comocomprar.html" class="menu-item">CÓMO COMPRAR</a>
+            <a href="./arreglos.html" class="menu-item">ARREGLOS</a>
+            <button class="menu-item">GIRLS</button>
+            <button class="menu-item">BOYS</button>
+            <button class="menu-item">Materos</button>
+            <a href="./scateam.html" class="menu-item">SE PARTE DE SC & A</a>
+            <a href="./opinionessca.html" class="menu-item">OPINIONES</a>
+            <a href="./sobresca.html" class="menu-item">SOBRE SC & A</a>
+        </nav>
+    </aside>
+
+    <!-- Modal de Contacto -->
+    <div id="contact-modal" class="modal-contact">
+        <div class="modal-content">
+            <button id="close-contact" class="close-btn">&times;</button>
+            <h3>¿Dudas?</h3>
+            <p>¡Escribinos y te asesoramos!</p>
+            <div class="contact-links">
+                <a href="https://wa.me/54911XXXXXXXX" target="_blank" class="contact-btn whatsapp">📱 WhatsApp</a>
+                <a href="https://instagram.com/tu_cuenta" target="_blank" class="contact-btn instagram">📸 Instagram</a>
+                <a href="mailto:contacto@sca.com" class="contact-btn email">✉️ Correo Electrónico</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <section class="hero-sca"></section>
+
+        <section class="container">
+            <h2 class="titulo-seccion">Nuestros Productos</h2>
+            <div id="contenedor-productos" class="productos-grid">
+                <!-- Se inyectan con JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="main-footer-bottom">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>SC & A</h3>
+                <p>Outfits a tu altura - Diseño independiente y confección artesanal.</p>
+            </div>
+            <div class="footer-links">
+                <a href="./sobresca.html">Sobre SC & A</a>
+                <a href="./comocomprar.html">Cómo Comprar</a>
+                <a href="./opinionessca.html">Opiniones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SC & A - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

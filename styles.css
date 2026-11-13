@@ -1,0 +1,697 @@
+/* ==========================================
+1. RESETEO BÁSICO Y CONFIGURACIÓN GLOBAL
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eae8e1;
+}
+
+/* La transición suave se aplica ÚNICAMENTE cuando agregamos esta clase desde el botón */
+body.animar-transicion {
+    transition: background-color 0.4s ease;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==========================================
+   2. MODO OSCURO (DARK MODE)
+   ========================================== */
+body.oscuro {
+    background-color: #03013e;
+
+    .main-header {
+        background-color: #000033;
+    }
+
+    .btn-mood {
+        background-color: #000e4f9a;
+    }
+
+    .container {
+        h2 {
+            color: #ebebfb;
+        }
+    }
+
+    .hero-sca {
+        background-image: url('./fondosatinight.jpg');
+    }
+
+    .card {
+        background-color: hsl(7, 99%, 32%);
+        color: hsl(30, 1%, 95%);
+
+        p {
+            color: #eadddd;
+        }
+    }
+
+    .info {
+        background-color: #0c0c7d;
+
+        p {
+            color: #acc9e6;
+        }
+    }
+}
+
+/* ==========================================
+   3. HEADER Y ALINEACIÓN DE ÍCONOS
+   ========================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background-color: #000033;
+    color: #ffffff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.brand-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.brand-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    max-width: 13.75rem;
+    width: 100%;
+}
+
+.logo-img,
+.social-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+.header-ig-btn {
+    background: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    background: #883a0d;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu-toggle,
+.btn-contact {
+    background-color: #b84e10;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* ==========================================
+   4. MENÚ LATERAL
+   ========================================== */
+.side-menu {
+    position: fixed;
+    top: 9rem;
+    left: 0;
+    width: 16rem;
+    max-width: 80vw;
+    height: calc(100vh - 6.8rem);
+    max-height: calc(100vh - 6.8rem);
+    overflow-y: auto;
+    background-color: #001e49cc;
+    padding: 1.5rem 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.2);
+    z-index: 40;
+}
+
+.side-menu.open {
+    display: flex;
+}
+
+.menu-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.menu-item {
+    background-color: #aa3613;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.7rem 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #470910;
+}
+
+/* ==========================================
+   5. SECCIÓN HERO Y PRODUCTOS
+   ========================================== */
+.hero-sca {
+    width: 100%;
+    min-height: 40vh;
+    background-image: url('./fondo-satinado.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo-seccion {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+}
+
+.productos-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card {
+    background-color: #f3eecd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 280px;
+    width: 100%;
+    gap: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+    p {
+        color: #514a4a;
+    }
+}
+
+.card-img {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .precio {
+        color: #b84e10;
+        font-weight: bold;
+    }
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-comprar,
+.btn-info {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-comprar {
+    background-color: #000a1f;
+    color: #ffffff;
+}
+
+.btn-comprar.comprado {
+    background-color: hsla(251, 82%, 36%, 0.901);
+    color: #ffffff;
+}
+
+.btn-info {
+    background-color: #0e0431;
+    color: #ffffff;
+}
+
+.info {
+    display: none;
+    background-color: #eae5d9;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+
+    p {
+        color: #514a4a;
+    }
+}
+
+.info.visible {
+    display: block;
+}
+
+/* ==========================================
+   6. MODAL DE CONTACTO
+   ========================================== */
+.modal-contact {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contact.visible {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #0d1478;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 25rem;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00001a;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+}
+
+/* ==========================================
+   7. RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 0.6rem 1rem;
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    .side-menu {
+        top: 4.5rem;
+        height: calc(100vh - 4.5rem);
+        max-height: calc(100vh - 4.5rem);
+        width: 80vw;
+        max-width: 18rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* ==========================================
+   8. FOOTER INSTITUCIONAL
+   ========================================== */
+.main-footer-bottom {
+    background-color: #000033;
+    color: #ffffff;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    width: 100%;
+    margin-top: 3rem;
+    border-top: 0.2rem solid #b84e10;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-info {
+    max-width: 300px;
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    p {
+        font-size: 0.85rem;
+        opacity: 0.8;
+        line-height: 1.4;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.85;
+        transition: opacity 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+            color: #b84e10;
+        }
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+body.oscuro {
+    .main-footer-bottom {
+        background-color: #00001a;
+        border-top-color: #000e4f9a;
+    }
+}
+
+/* ==========================================
+   9. ESTILOS PÁGINA CÓMO COMPRAR
+   ========================================== */
+.pagina-header {
+    text-align: center;
+    padding: 3rem 1rem 1rem 1rem;
+
+    h1 {
+        font-size: 2.4rem;
+        color: #000033;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #262525;
+    }
+
+}
+
+.pasos-comprar-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.paso-card {
+    background-color: #f3eecd;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.482);
+    border-left: 0.35rem solid #b84e10;
+}
+
+.paso-numero {
+    background-color: #000033;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paso-info {
+    h3 {
+        color: #000033;
+        margin-bottom: 0.4rem;
+        font-size: 1.4rem;
+    }
+
+    p {
+        color: #0d0d0d;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    i {
+        background-color: rgb(86, 142, 140);
+        font-size: 0.90rem;
+        color: #000033;
+    }
+}
+
+/* Modo oscuro para la sección de Cómo Comprar */
+body.oscuro {
+    .pagina-header {
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            color: #eadddd;
+        }
+    }
+
+    .paso-card {
+        background-color: hsl(240, 84%, 17%);
+        border-left-color: #aa3613;
+    }
+
+    .paso-numero {
+        background-color: #b84e10;
+    }
+
+    .paso-info {
+        h3 {
+            color: #ffffff;
+        }
+
+        p {
+            color: #eadddd;
+        }
+    }
+}
+
+/* ==========================================
+   10. SECCIÓN NOVIAS (CARD CENTRADA)
+   ========================================== */
+.card-novias {
+    background-color: #f3eecd;
+    color: #191818;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.276);
+    border-top: 0.4rem solid #b84e10;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    h2 {
+        color: #000033;
+        font-size: 2rem;
+    }
+}
+
+.novias-info {
+    background: linear-gradient(06deg, #99c3fa, #cde5fd, #f3eecd);
+}
+
+.novias-intro {
+    font-size: 1.07rem;
+    line-height: 1.5;
+}
+
+.novias-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.btn-whatsapp-novias {
+    background-color: #000a1f;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #b84e10;
+    }
+}
+
+.novias-detalles {
+    font-size: 0.90rem;
+    opacity: 0.8;
+}
+
+.novias-tip {
+    background-color: rgba(184, 78, 16, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+    border-left: 3px solid #b84e10;
+
+    strong {
+        color: #000033;
+    }
+}
+
+/* Modo oscuro para la Card de Novias */
+body.oscuro {
+
+    .novias-info {
+       background: linear-gradient(0deg, #e8c880 ,#e9d2a3e9, #03013e);
+    }
+
+    .card-novias {
+        background-color: #06575ae9;
+        color: #fffcfc;
+        border-top-color: #fff6f8;
+
+        h2 {
+            color: #f4f8fa;
+        }
+    }
+
+    .btn-whatsapp-novias {
+        background-color: #933e0c;
+
+        &:hover {
+            background-color: #0ac083;
+        }
+    }
+
+    .novias-tip {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-left-color: #933e0c;
+
+        strong {
+            color: #c3f7ec;
+        }
+    }
+}

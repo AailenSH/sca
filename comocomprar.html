@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Comprar - SC & A</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        if (localStorage.getItem("theme") === "oscuro") {
+            document.documentElement.classList.add("oscuro-inicial");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Encabezado superior (Mismo del index) -->
+    <header class="main-header">
+        <div class="header-left">
+            <button id="menu-btn" class="btn-menu-toggle">☰</button>
+            <a href="./index.html" class="logo-link">
+                <img src="./logosca.png" alt="SC & A Logo" class="logo-img">
+            </a>
+
+            <div class="brand-text">
+                <span class="brand-title">Outfits a tu altura</span>
+                <span class="brand-subtitle">Diseño independiente y confección artesanal</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button id="theme-toggle" class="btn btn-mood" title="Cambiar modo">🌙</button>
+            <a href="https://instagram.com/tu_cuenta" target="_blank" class="header-ig-btn" title="Instagram">
+                <img src="./instalogosca.jpeg" alt="Instagram" class="social-logo-img">
+            </a>
+            <button id="contact-btn" class="btn-contact">CONTÁCTANOS</button>
+        </div>
+    </header>
+
+    <!-- Menú lateral izquierdo -->
+    <aside id="side-menu" class="side-menu">
+        <nav class="menu-items-container">
+            <a href="./index.html" class="menu-item">INICIO / CATÁLOGO</a>
+            <a href="./comocomprar.html" class="menu-item">CÓMO COMPRAR</a>
+            <a href="./arreglos.html" class="menu-item">ARREGLOS</a>
+            <a href="./scateam.html" class="menu-item">SE PARTE DE SC & A</a>
+            <a href="./opinionessca.html" class="menu-item">OPINIONES</a>
+            <a href="./sobresca.html" class="menu-item">SOBRE SC & A</a>
+        </nav>
+    </aside>
+
+    <!-- Modal de Contacto -->
+    <div id="contact-modal" class="modal-contact">
+        <div class="modal-content">
+            <button id="close-contact" class="close-btn">&times;</button>
+            <h3>¿Dudas?</h3>
+            <p>¡Escribinos y te asesoramos!</p>
+            <div class="contact-links">
+                <a href="https://wa.me/54911XXXXXXXX" target="_blank" class="contact-btn whatsapp">📱 WhatsApp</a>
+                <a href="https://instagram.com/tu_cuenta" target="_blank" class="contact-btn instagram">📸 Instagram</a>
+                <a href="mailto:contacto@sca.com" class="contact-btn email">✉️ Correo Electrónico</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal: Guía de Pasos -->
+    <main class="main-content">
+        <section class="pagina-header">
+            <h1>Guía de Compra</h1>
+            <p>Te explicamos paso a paso cómo encargar tu outfit ideal en SC & A</p>
+        </section>
+
+        <section class="pasos-comprar-container">
+            <!-- Paso 1 -->
+            <article class="paso-card">
+                <div class="paso-numero">1</div>
+                <div class="paso-info">
+                    <h3>Elegí tu diseño</h3>
+                    <p>Explorá nuestro catálogo de prendas exclusivas y confección a medida en la tienda principal.</p>
+                </div>
+            </article>
+
+            <!-- Paso 2 -->
+            <article class="paso-card">
+                <div class="paso-numero">2</div>
+                <div class="paso-info">
+                    <h3>Elegí el talle</h3>
+                    <p>Hacé clic en uno de los botónes de <strong>"Talles"</strong>, y elegí el tuyo.</p>
+                    <p> IMPORTANTE: en cada producto dejamos en las imagenes la lista de talles. Tomate las medidas y
+                        elegí tu talle ideal.</p>
+                    <i> (Recorda medirte considerando si la tela es elastica o no, y teniendo en cuenta como quieras que
+                        te quede puesta.)</i>
+                </div>
+            </article>
+
+            <!-- Paso 3 -->
+            <article class="paso-card">
+                <div class="paso-numero">3</div>
+                <div class="paso-info">
+                    <h3>Contactanos</h3>
+                    <p>Si aún tenes dudas con tus medidas o queres consultarnos sobre otros modelos,
+                        podes consultarnos sin compromiso:</p>
+                    <p>Hacé clic en el botón <strong>"CONTÁCTANOS"</strong> y envianos un mensaje por WhatsApp con tus
+                        medidas o dudas.</p>
+                </div>
+            </article>
+
+            <!-- Paso 4 -->
+            <article class="paso-card">
+                <div class="paso-numero">4</div>
+                <div class="paso-info">
+                    <h3>Confección a medida</h3>
+                    <p>Preparamos tu prenda con dedicación artesanal y telas seleccionadas cuidando cada detalle.</p>
+                </div>
+            </article>
+
+            <!-- Paso 5 -->
+            <article class="paso-card">
+                <div class="paso-numero">5</div>
+                <div class="paso-info">
+                    <h3>Coordinación de Entrega</h3>
+                    <p>Te avisamos apenas tu outfit esté listo para retirar o enviar a donde estés.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- información para novias -->
+    <section class="novias-info">
+   <section class="container">
+    <div class="card-novias">
+        <h2>💍 ¿Boda en camino?</h2>
+        <p class="novias-intro">¡Estamos aquí para ayudarte a brillar en tu día especial! Elegí tu diseño y talle, o dejanos hacer realidad el look ideal que imaginas.</p>
+        
+        <div class="novias-cta">
+            <a href="https://wa.me/54911XXXXXXXX" target="_blank" class="btn-whatsapp-novias">📱 Contactanos por WhatsApp</a>
+            <p class="novias-detalles">Contanos qué buscas para tu gran día.</p>
+        </div>
+
+        <div class="novias-tip">
+            <p><strong>💡 Tip:</strong> ¡Mientras más pronto nos escribas, mejor! Planificar con (incluso meses de) anticipación evita el estrés, nos da el tiempo de trabajar con total calma y garantiza un diseño cómodo, a tu medida y exactamente como lo soñaste.</p>
+        </div>
+    </div>
+</section>
+    <!-- Footer Institucional -->
+    <footer class="main-footer-bottom">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>SC & A</h3>
+                <p>Outfits a tu altura - Diseño independiente y confección artesanal.</p>
+            </div>
+            <div class="footer-links">
+                <a href="./sobresca.html">Sobre SC & A</a>
+                <a href="./comocomprar.html">Cómo Comprar</a>
+                <a href="./opinionessca.html">Opiniones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SC & A - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JS Modular para que el menú, el modo oscuro y el modal funcionen acá también -->
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
