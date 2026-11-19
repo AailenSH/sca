@@ -388,8 +388,18 @@ body.oscuro {
    7. RESPONSIVE
    ========================================== */
 @media (max-width: 768px) {
+    .logo-link {
+        max-width: 10rem;
+    }
+    
     .main-header {
         padding: 0.6rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .header-right{
+        justify-content: flex-end;
+        width: 100%;
     }
 
     .brand-text {
