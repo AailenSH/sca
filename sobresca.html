@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC & A - Moda y Confección Artesanal</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Script ultrarrápido para aplicar el tema antes de renderizar y evitar el destello -->
+    <script>
+        if (localStorage.getItem("theme") === "oscuro") {
+            document.documentElement.classList.add("oscuro-inicial");
+        }
+    </script>
+</head>
+
+<body class="animar-transicion">
+
+    <!-- Encabezado superior -->
+    <header class="main-header">
+        <div class="header-left">
+            <button id="menu-btn" class="btn-menu-toggle">☰</button>
+          <a href="./index.html" class="logo-link">
+                <img src="./logosca.png" alt="SC & A Logo" class="logo-img">
+            </a>
+
+            <div class="brand-text">
+                <span class="brand-title">La ropa a tu estilo</span>
+                <span class="brand-subtitle">Diseño independiente y confección artesanal</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button id="theme-toggle" class="btn btn-mood" title="Cambiar modo">🌙</button>
+            <a href="https://instagram.com/tu_cuenta" target="_blank" class="header-ig-btn" title="Instagram">
+                <img src="./instalogosca.jpeg" alt="Instagram" class="social-logo-img">
+            </a>
+            <button id="contact-btn" class="btn-contact">CONTÁCTANOS</button>
+        </div>
+    </header>
+
+    <!-- Menú lateral izquierdo -->
+    <aside id="side-menu" class="side-menu">
+        <nav class="menu-items-container">
+            <a href="./index.html" class="menu-item">INICIO / CATÁLOGO</a>
+            <a href="./comocomprar.html" class="menu-item">CÓMO COMPRAR</a>
+            <button class="menu-item">GIRLS</button>
+            <button class="menu-item">BOYS</button>
+            <button class="menu-item">Materos</button>
+            <a href="./scateam.html" class="menu-item">SE PARTE DE SC & A</a>
+            <a href="./opinionessca.html" class="menu-item">OPINIONES</a>
+            <a href="./sobresca.html" class="menu-item">SOBRE SC & A</a>
+        </nav>
+    </aside>
+
+    <!-- Modal de Contacto -->
+    <div id="contact-modal" class="modal-contact">
+        <div class="modal-content">
+            <button id="close-contact" class="close-btn">&times;</button>
+            <h3>¿Dudas?</h3>
+            <p>¡Escribinos y te asesoramos!</p>
+            <div class="contact-links">
+                <a href="https://wa.me/54911XXXXXXXX" target="_blank" class="contact-btn whatsapp">📱 WhatsApp</a>
+                <a href="https://instagram.com/tu_cuenta" target="_blank" class="contact-btn instagram">📸 Instagram</a>
+                <a href="mailto:contacto@sca.com" class="contact-btn email">✉️ Correo Electrónico</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content-sca">
+        <section class="hero-sobre-sca">
+        </section>
+
+    <section class="historia-sca">
+    <h1 class="titulo-seccion titulo-principal-sca">Sobre SC &amp; A</h1>
+    <h2 class="subtitulo-sca">Conoce un poco de nuestra historia</h2>
+
+        <div class="historia-layout">
+            <div class="historia-texto">
+                <p>
+                    Detrás de las iniciales de <strong>SC &amp; A</strong> hay un proyecto familiar de diseño
+                    independiente, nacido de las ganas de crear prendas únicas con las manos y el corazón. Unimos el
+                    oficio tradicional de la costura artesanal con el mundo digital: mientras una aporta toda la
+                    experiencia en diseño y confección para dar vida a cada pieza desde cero, la otra ayuda en la
+                    moldería y se encarga de construir esta tienda online y de acompañarte en cada consulta.
+                </p>
+                <p>
+                    Nuestro corazón está puesto en los vestidos, pensados para mujeres coquetas que disfrutan jugar con
+                    su estilo y nunca eligen lo aburrido. En nuestras colecciones conviven dos mundos: desde propuestas
+                    dulces, románticas y delicadas, hasta diseños más coloridos u en tonos oscuros y con mucha
+                    actitud, para que siempre encuentres algo que represente cómo te sentís hoy.
+                </p>
+                <p>
+                    Además, diseñamos complementos con la misma dedicación para acompañarte en tu rutina: blusas,
+                    corbatas haciendo juego, sets materos y bolsos porta botellas.
+                </p>
+                <p class="historia-cierre">
+                    Diseño independiente, confección artesanal y hecho en Argentina. Gracias por apoyarnos y bienvenida
+                    a <strong>SC &amp; A</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="main-footer-bottom">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>SC & A</h3>
+                <p>Outfits a tu altura - Diseño independiente y confección artesanal.</p>
+            </div>
+            <div class="footer-links">
+                <a href="./sobresca.html">Sobre SC & A</a>
+                <a href="./comocomprar.html">Cómo Comprar</a>
+                <a href="./opinionessca.html">Opiniones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SC & A - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

@@ -26,27 +26,32 @@ btnCerrarContacto.addEventListener("click", toggleContacto);
 // 4. Control del Modo Oscuro con Persistencia sin destellos
 const btnThemeToggle = document.querySelector("#theme-toggle");
 
+function aplicarTema(esOscuro) {
+    if (esOscuro) {
+        document.body.classList.add("oscuro");
+        document.documentElement.classList.add("oscuro-inicial");
+        if (btnThemeToggle) btnThemeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "oscuro");
+    } else {
+        document.body.classList.remove("oscuro");
+        document.documentElement.classList.remove("oscuro-inicial");
+        if (btnThemeToggle) btnThemeToggle.textContent = "🌙";
+        localStorage.removeItem("theme");
+    }
+}
+
 // Verificamos memoria al cargar
 if (localStorage.getItem("theme") === "oscuro") {
-    document.body.classList.add("oscuro");
-    if (btnThemeToggle) {
-        btnThemeToggle.textContent = "☀️";
-    }
+    aplicarTema(true);
+} else {
+    aplicarTema(false);
 }
 
 if (btnThemeToggle) {
     btnThemeToggle.addEventListener("click", () => {
-        // Activamos la clase de transición suave solo cuando se hace clic en el botón
         document.body.classList.add("animar-transicion");
-        document.body.classList.toggle("oscuro");
-        
-        if (document.body.classList.contains("oscuro")) {
-            btnThemeToggle.textContent = "☀️";
-            localStorage.setItem("theme", "oscuro");
-        } else {
-            btnThemeToggle.textContent = "🌙";
-            localStorage.removeItem("theme");
-        }
+        const ahoraEsOscuro = !document.body.classList.contains("oscuro");
+        aplicarTema(ahoraEsOscuro);
     });
 }
 
@@ -91,7 +96,7 @@ if (contenedorProductos) {
             } else {
                 btn.textContent = "Comprar";
             }
-        }
+            }
 
         const btnInfo = e.target.closest(".btn-info");
         if (btnInfo) {
