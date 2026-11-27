@@ -49,13 +49,33 @@ body.oscuro {
         background-image: url('./fondosatinight.jpg');
     }
 
+    /* Un tono apenas más oscuro y levemente más rojizo que #8b4f2a */
     .card {
-        background-color: hsl(7, 99%, 32%);
-        color: hsl(30, 1%, 95%);
+        background-color: #6b3424;
+        color: #f7f3f0;
 
         p {
-            color: #eadddd;
+            color: #ead8d2;
         }
+
+        .precio {
+            color: #f4b183;
+        }
+    }
+
+    .btn-comprar {
+        background-color: #000a1f;
+        color: #ffffff;
+
+        &.comprado {
+            background-color: hsla(251, 82%, 36%, 0.901);
+            color: #ffffff;
+        }
+    }
+
+    .btn-info {
+        background-color: #0e0431;
+        color: #ffffff;
     }
 
     .info {
@@ -89,12 +109,12 @@ body.oscuro {
     }
 
     .paso-card {
-        background-color: hsl(240, 84%, 17%);
-        border-left-color: #aa3613;
+        background-color: #775337;
+        border-left-color: #d47a38;
     }
 
     .paso-numero {
-        background-color: #b84e10;
+        background-color: #26160c;
     }
 
     .paso-info {
@@ -103,11 +123,11 @@ body.oscuro {
         }
 
         p {
-            color: #eadddd;
+            color: #f5ece4;
         }
 
         i {
-            background-color: rgba(184, 78, 16, 0.28);
+            background-color: rgba(255, 255, 255, 0.14);
             color: #ffffff;
         }
     }
@@ -135,30 +155,32 @@ body.oscuro {
         }
     }
 
+    /* Sobre SC & A en modo oscuro: íntimo, cálido y con aire vintage */
     .main-content-sca {
-        background: linear-gradient(180deg, #020124, #090b42, #121559);
+        background: linear-gradient(180deg, #04072b 0%, #10154a 55%, #1c1847 100%);
 
         .historia-texto p {
-            color: #f2f2fc;
+            color: #f3ece2;
         }
     }
 
     .titulo-principal-sca {
-        color: #ffffff;
+        color: #f8f3eb;
     }
 
     .subtitulo-sca {
-        color: #d5d8ff;
+        color: #dfc9ae;
     }
 
     .historia-texto {
-        background-color: rgba(11, 15, 68, 0.92);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background-color: rgba(26, 21, 56, 0.92);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.48);
+        border: 1px solid rgba(223, 201, 174, 0.22);
     }
 
     .historia-cierre {
-        border-top-color: rgba(255, 255, 255, 0.18);
+        color: #f4d3b0;
+        border-top-color: rgba(223, 201, 174, 0.25);
     }
 }
 
@@ -237,7 +259,7 @@ body.oscuro {
     margin: 0;
     font-size: 1.2rem;
     padding: 0.4rem;
-    background: #883a0d;
+    background-color: #8b4f2a;
     border-radius: 20%;
     border: none;
     cursor: pointer;
@@ -246,10 +268,20 @@ body.oscuro {
     justify-content: center;
 }
 
-.btn-menu-toggle,
 .btn-contact {
-    background-color: #b84e10;
-    color: white;
+    background-color: #8b4f2a;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Un poquitito más oscuro que #8b4f2a */
+.btn-menu-toggle {
+    background-color: #7a4322;
+    color: #ffffff;
     border: none;
     padding: 0.6rem 1rem;
     font-weight: bold;
@@ -290,9 +322,10 @@ body.oscuro {
     }
 }
 
+/* Un poquitito más oscuro que #8b4f2a */
 .menu-item {
-    background-color: #aa3613;
-    color: white;
+    background-color: #7a4322;
+    color: #ffffff;
     text-decoration: none;
     border: none;
     width: 100%;
@@ -304,7 +337,7 @@ body.oscuro {
     cursor: pointer;
 
     &:hover {
-        background-color: #470910;
+        background-color: #5c3016;
     }
 }
 
@@ -348,7 +381,8 @@ body.oscuro {
 }
 
 .card {
-    background-color: #f3eecd;
+    background-color: #8b4f2a;
+    color: #f9f5f0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -359,7 +393,7 @@ body.oscuro {
     transition: background-color 0.4s ease, color 0.4s ease;
 
     p {
-        color: #514a4a;
+        color: #f1e5dc;
     }
 }
 
@@ -377,7 +411,7 @@ body.oscuro {
     gap: 0.75rem;
 
     .precio {
-        color: #b84e10;
+        color: #ffe0bd;
         font-weight: bold;
     }
 }
@@ -589,14 +623,15 @@ body.oscuro {
     gap: 1.5rem;
 }
 
+/* Suave y sin encandilar ni tironear tanto al amarillo */
 .paso-card {
-    background-color: #f3eecd;
+    background-color: #e7e2d6;
     display: flex;
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
     border-left: 0.35rem solid #b84e10;
 }
 
@@ -621,13 +656,13 @@ body.oscuro {
     }
 
     p {
-        color: #0d0d0d;
+        color: #181818;
         font-size: 0.95rem;
         line-height: 1.4;
     }
 
     i {
-        background-color: rgba(184, 78, 16, 0.16);
+        background-color: rgba(184, 78, 16, 0.14);
         padding: 0.1rem 0.35rem;
         border-radius: 0.25rem;
         font-size: 0.90rem;
@@ -638,20 +673,21 @@ body.oscuro {
 /* ==========================================
 9. SECCIÓN TALLES (CARD CENTRADA)
    ========================================== */
+/* Arranca en #eae8e1 (mismo fondo superior) y baja hacia los celestes sin tocarlos */
 .talles-info {
-    background: linear-gradient(6deg, #99c3fa, #cde5fd, #f3eecd);
+    background: linear-gradient(180deg, #eae8e1 0%, #cde5fd 52%, #99c3fa 100%);
     padding: 2rem 1rem;
 }
 
 .card-talles {
-    background-color: #f3eecd;
+    background-color: #e7e2d6;
     color: #191818;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: 2.5rem 2rem;
     border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     border-top: 0.4rem solid #b84e10;
     display: flex;
     flex-direction: column;
@@ -720,7 +756,7 @@ body.oscuro {
     background-image: url('./presentacionsca.jpeg');
     background-size: cover;
     background-position: center;
-    border-bottom: #b84e10 solid 0.20rem;
+    border-bottom: #8b4f2a solid 0.22rem;
 }
 
 .titulo-principal-sca {
@@ -738,15 +774,16 @@ body.oscuro {
     margin-bottom: 1rem;
 }
 
+/* Comfy + vintage con identidad SC & A y dinamismo */
 .main-content-sca {
-    background: linear-gradient(430deg, #03114f, #989ef7, #5666f4, #f3f4f8);
+    background: linear-gradient(165deg, #f5efe4 0%, #e7d7c1 42%, #9aa4f5 78%, #03114f 100%);
     display: flex;
     flex-direction: column;
 
     p {
-        color: #000000;
+        color: #161529;
         font-size: 1.05rem;
-        line-height: 1.5;
+        line-height: 1.55;
     }
 }
 
@@ -773,10 +810,12 @@ body.oscuro {
 .historia-texto {
     max-width: 760px;
     width: 100%;
-    background-color: rgba(243, 238, 205, 0.9);
+    background-color: rgba(250, 246, 238, 0.93);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 8px 22px rgba(0, 0, 51, 0.14);
+    border: 1px solid rgba(139, 79, 42, 0.25);
+    border-top: 4px solid #8b4f2a;
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
@@ -784,7 +823,8 @@ body.oscuro {
 
 .historia-cierre {
     font-weight: 600;
-    border-top: 1px solid rgba(0, 0, 51, 0.15);
+    color: #000033;
+    border-top: 1px solid rgba(139, 79, 42, 0.25);
     padding-top: 0.9rem;
 }
 
